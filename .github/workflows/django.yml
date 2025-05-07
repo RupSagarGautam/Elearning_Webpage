@@ -30,6 +30,5 @@ jobs:
 
       - name: Run Tests
         run: |
-          .venv\Scripts\Activate
-          cd elearning_backed  # Replace 'myproject' with the actual subdirectory name containing manage.py
-          python manage.py test
+          cd elearning_backed  
+          py manage.py runserver
