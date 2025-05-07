@@ -22,13 +22,20 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: 'x64'
 
+      - name: Create and Activate Virtual Environment
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          python -m pip install --upgrade pip
+
       - name: Install Dependencies
         run: |
-          python -m pip install --upgrade pip
+          source .venv/bin/activate
           python -m pip install django==4.2.21
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run Tests
         run: |
-          cd elearning_backend 
-          py manage.py runserver
+          source .venv/bin/activate
+          cd elearning_backend/elearning_backend  # Navigate to the inner directory
+          python manage.py test
