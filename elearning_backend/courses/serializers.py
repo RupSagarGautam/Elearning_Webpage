@@ -19,6 +19,7 @@ class CourseSerializer(serializers.ModelSerializer):
             return obj.image.url
         return None
 
+
     def get_video(self, obj):
         if obj.video:
             request = self.context.get('request')
