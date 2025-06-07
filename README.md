@@ -1,7 +1,7 @@
 ﻿ # Elearning_Webpage- 
  ## To Run this Project
  ####  STEP 1 : Clone the repository 
- ##### STEP 2 : Copy this code and paste it in your terminal of code editor 
+ #### STEP 2 : Copy this code and paste it in your terminal of code editor 
  #####  git clone https://github.com/RupSagarGautam/Elearning_Webpage.git 
  ####  STEP 3 : Install the required packages using pip install -r requirements.txt
  ####  STEP 4 : First Run the .venv\Scripts\Activate  
